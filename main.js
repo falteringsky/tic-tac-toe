@@ -129,8 +129,18 @@ const gameController = (() => {
         return winConditions.filter((combination) => combination.includes(boardIndex))
         .some((possibleCombination) => possibleCombination
             .every((index) => 
-        gameBoard.getBoard(index) === getCurrentPlayerSign()
-            )
-        )
+        gameBoard.getBoard(index) === getCurrentPlayerSign())
+        );
     };
+
+    const getIsOver = () => {
+        return isOver;
+    }
+
+    const reset = () => {
+        round = 1;
+        isOver = false;
+    }
+
+    return {playRound, getIsOver, reset};
 })();
