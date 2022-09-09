@@ -61,7 +61,7 @@ const displayController = (() => {
         gameBoard.reset();
         gameController.reset();
         updateGameBoard();
-        setDisplayMessage('Player X"s turn');
+        setDisplayMessage(`Player X's Turn`);
     })
 
     const updateGameBoard = () => {
@@ -107,7 +107,7 @@ const gameController = (() => {
             return;
         }
         round++;
-        displayController.setDisplayMessage(`Player ${getCurrentPlayerSign()} turn!`);
+        displayController.setDisplayMessage(`Player ${getCurrentPlayerSign()} Turn!`);
     }
 
     const getCurrentPlayerSign = () => {
