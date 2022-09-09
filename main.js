@@ -48,11 +48,11 @@ const displayController = (() => {
 
     boardCells.forEach((field) => field.addEventListener('click', (e) => {
         if (!gameController.getIsOver() || e.target.textContent == '') {
-            return
-        }
-        else {
             gameController.playRound(parseInt(e.target.dataset.index));
             updateGameBoard();
+        }
+        else {
+            return
         }
     })
     )
@@ -124,7 +124,7 @@ const gameController = (() => {
             [2, 5, 8],
             [0, 4, 8],
             [2, 4, 6],
-        ]
+        ];
 
         return winConditions.filter((combination) => combination.includes(boardIndex))
         .some((possibleCombination) => possibleCombination
