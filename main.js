@@ -47,13 +47,14 @@ const displayController = (() => {
     const restartBtn = document.querySelector('.restartBtn');
 
     boardCells.forEach((field) => field.addEventListener('click', (e) => {
-        if (!gameController.getIsOver() || e.target.textContent == '') {
+        if (gameController.getIsOver() !== true || e.target.textContent == '') {
             gameController.playRound(parseInt(e.target.dataset.index));
             updateGameBoard();
         }
-        else {
-            return
-        }
+        return;
+        // if (gameController.getIsOver() || e.target.textContent !== '') return;
+        //     gameController.playRound(parseInt(e.target.dataset.index));
+        //     updateGameBoard();
     })
     )
 
