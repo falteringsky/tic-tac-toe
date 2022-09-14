@@ -93,3 +93,55 @@ footer {
     justify-content: center;
     align-items: center;
 }
+
+#play-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
+
+#play-btn {
+    display: flex;
+    color: aqua;
+}
+
+.play-btn-activated {
+    color: green;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 4vw;
+    cursor: pointer;
+    color: red;
+    height: fit-content;
+}
+
+#PVP-section,
+#AI-section {
+    display: flex;
+    padding: 1vw;
+    width: 13.5vw;
+    height: 17vw;
+    justify-content: center;
+}
+
+.players {
+    display: flex;
+    flex-direction: column;
+}
+
+.selected {
+    font-size: 3vw;
+    text-align: center;
+}
+
+.collapse {
+    visibility: collapse;
+}
+
+.hide {
+    visibility: hidden;
+}
