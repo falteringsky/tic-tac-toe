@@ -12,23 +12,44 @@
         <h1 class="title">Tic-Tac-Toe!</h1>
     </header>
     <main>
-        <div class="display-message">Player X's Turn!</div>
+        <div id="display-message"></div>
         <div class="container">
-                <div class="cells" data-index="0"></div>
-                <div class="cells" data-index="1"></div>
-                <div class="cells" data-index="2"></div>
-                <div class="cells" data-index="3"></div>
-                <div class="cells" data-index="4"></div>
-                <div class="cells" data-index="5"></div>
-                <div class="cells" data-index="6"></div>
-                <div class="cells" data-index="7"></div>
-                <div class="cells" data-index="8"></div>
+                <div class="cells" id="data-0" data-index="0"></div>
+                <div class="cells" id="data-1" data-index="1"></div>
+                <div class="cells" id="data-2" data-index="2"></div>
+                <div class="cells" id="data-3" data-index="3"></div>
+                <div class="cells" id="data-4" data-index="4"></div>
+                <div class="cells" id="data-5" data-index="5"></div>
+                <div class="cells" id="data-6" data-index="6"></div>
+                <div class="cells" id="data-7" data-index="7"></div>
+                <div class="cells" id="data-8" data-index="8"></div>
         </div>
-        <button class="restartBtn">Restart</button>
+
+        <div id="play-section">
+            <p id="playBtn">Play</p>
+            <div id="play-type-selection">
+                <div class="arrow">&#x3c;</div>
+                <div id="PVP-section" class="">
+                    <form class="players">
+                        <p id="PVP" class="selected">PVP</p>
+                        <label for="playerX-name">Player X:</label>
+                        <input type="text" name="name" id="playerX-name" placeholder="Enter Name">
+                        <span id="playerX-alert"></span>
+                        <label for="playerO-name">Player O:</label>
+                        <input type="text" name="name" id="playerO-name" placeholder="Enter Name">
+                        <span id="playerO-alert"></span>
+                    </form>
+                </div>
+                <div id="AI-section" class="collapse">
+                    <p id="AI" class="">AI</p>
+                </div>
+                <div class="arrow">&#x3e;</div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="credits">Designed by Falteringsky</div>
     </footer>
-    <script src="./main.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
