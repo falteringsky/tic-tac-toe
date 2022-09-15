@@ -12,8 +12,9 @@
         <h1 class="title">Tic-Tac-Toe!</h1>
     </header>
     <main>
-        <p id="play-btn">Play</p>
-        <div class="display-message"></div>
+        <p id="playBtn">Play</p>
+        <div id="display-message"></div>
+        <section class="middle">
         <div class="container">
                 <div class="cells" id="data-0" data-index="0"></div>
                 <div class="cells" id="data-1" data-index="1"></div>
@@ -25,7 +26,7 @@
                 <div class="cells" id="data-7" data-index="7"></div>
                 <div class="cells" id="data-8" data-index="8"></div>
         </div>
-        <div id="play-section">
+        <div id="play-section" class="on">
             <div id="play-type-selection">
                 <div class="arrow">&#x3c;</div>
                 <div id="PVP-section" class="">
@@ -45,10 +46,11 @@
                 <div class="arrow">&#x3e;</div>
             </div>
         </div>
+        </section>
     </main>
     <footer>
         <div class="credits">Designed by Falteringsky</div>
     </footer>
-    <script src="./main.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
