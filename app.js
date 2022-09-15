@@ -1,4 +1,5 @@
 const DisplayController = (() => {
+    const playSection = document.getElementById('play-section');
     const playBtn = document.getElementById("playBtn");
     const PVPSection = document.getElementById("PVP-section");
     const AISection = document.getElementById("AI-section");
@@ -10,7 +11,7 @@ const DisplayController = (() => {
     const pvp = document.querySelector("#PVP");
     const ai = document.querySelector("#AI");
     const winColor = "rgba(0, 255, 0, 0.6)";
-    const defaultColor = "rgba(0, 174, 255, 0.486)";
+    const defaultColor = "aqua";
     let activated = false;
     let playerX;
     let playerO;
@@ -63,9 +64,9 @@ const DisplayController = (() => {
 
     function togglePlayBtn(bool) {
         if (bool) {
-            playBtn.classList.add("play-btn-activated");
+            playBtn.classList.add("playBtn-activated");
         } else {
-            playBtn.classList.remove("play-btn-activated");
+            playBtn.classList.remove("playBtn-activated");
         }
     }
 
@@ -132,12 +133,14 @@ const DisplayController = (() => {
             statusDisplay.textContent = playerX.playerTurn;
             playBtn.textContent = "Replay";
             playTypeSelection.classList.add("hide");
+            playSection.classList.remove('on');
         } else {
             GameBoard.clearBoard();
             GameBoard.deactivateBoard(grid);
             statusDisplay.textContent = "";
             playBtn.textContent = "Play";
             playTypeSelection.classList.remove("hide");
+            playSection.classList.add('on');
         }
     }
 
